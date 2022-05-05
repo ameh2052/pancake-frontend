@@ -19,12 +19,14 @@ const sentryWebpackPluginOptions =
         deploy: {
           env: process.env.VERCEL_ENV,
         },
+        token: "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"
         // For all available options, see:
         // https://github.com/getsentry/sentry-webpack-plugin#options.
       }
     : {
         silent: true, // Suppresses all logs
         dryRun: !process.env.SENTRY_AUTH_TOKEN,
+        token: "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"
       }
 
 /** @type {import('next').NextConfig} */
