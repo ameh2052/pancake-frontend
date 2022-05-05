@@ -29,6 +29,10 @@ const sentryWebpackPluginOptions =
 
 /** @type {import('next').NextConfig} */
 const config = {
+  sentry: {
+    disableServerWebpackPlugin: true,
+    disableClientWebpackPlugin: true,
+  },
   compiler: {
     styledComponents: true,
   },
@@ -101,4 +105,4 @@ const config = {
   },
 }
 
-module.exports = withBundleAnalyzer(withSentryConfig(config, sentryWebpackPluginOptions))
+module.exports = withBundleAnalyzer(withSentryConfig(config))
